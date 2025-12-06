@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+    nav {
+        background-color: #171717;
+        color: white;
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+    nav h1 a {
+        color:rgb(18, 208, 18);
+    }
+    img {
+        width: 20px;
+    }
+    p{
+        color:white
+    }
+    .full img {
+        width: 270px;
+        border-radius: 50%;
+        border:3px solid rgb(18, 208, 18);
+        margin-right: 60px;
+        box-shadow: 20px 12px 12px 30px rgb(18, 208, 18), 0px 0px 12px rgb(35, 209, 35),
+        0px 0px 12px rgb(71, 221, 71) ,0px 0px 12px rgb(95, 224, 95);
+    }
+    .full {
+        display: flex;
+        margin: 30px;
+        padding: 30px;
+        justify-content: space-between;
+        border: 1px solid black;
+        box-shadow: 0 0 10px rgb(18, 208, 18);
+    }
+    .stack, .img1 {
+        margin-left: 20px;
+        padding-top: 20px;
+    }
+    .stack h2 {
+        color: rgb(18, 208, 18);
+        font-size: 40px;
+        margin-top: 10px;
+    }
+    .stack p {
+        font-size: 13px;
+    }
+    .stack button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: rgb(18, 208, 18);
+        color: white;
+        border: none;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .skills-section {
+        margin: 30px;
+    }
+    .skills-section p {
+        font-size: 13px;
+    }
+    .hp{
+        color: white;
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    .skills {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        margin: 60px 0px 20px 30px;
+    }
+    .skill1:hover {
+        box-shadow: 0 0 10px rgb(18, 208, 18);
+    }
+    .skill1 {
+        background-color: #171717;
+        color: white;
+        border: 1px solid black;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .skill1 img {
+        width: 50px;
+    }
+    footer {
+        color: white;
+        padding: 20px;
+        margin-top: 80px;
+    }
+    footer p {
+        text-align: center;
+    }
+    footer img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer ul {
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 8px;
+        margin-top: 25px;
+    }
+
+
+</style>
+<body>
+    <main>
+        <nav>
+            <h1> <a href="#home">OgDev</a></h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="full">
+            <div class="stack">
+            <h2>Full-Stack</h2>
+            <h2>Developer</h2>
+            <p>Building digital experiences that merge creativity with technology.</p>
+            <p>Specializing in modern web development and cyber systems.</p>
+            <button>Let's Connect</button>
+            </div>
+
+            <div class="img1">
+                <img src="developer.jpg" alt="Developer Image">
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <h4 class="hp"> Technical Expertise</h4>
+
+            <div class="skills">
+            <div class="skill1">
+                <img src="front4.png" alt="Front-End Development">
+                <h4>Frontend Development</h4>
+                <p>HTML, CSS, JavaScript, React, Vue.js.</p>
+            </div>
+            <div class="skill1">
+                <img src="back4.png" alt="Back-End Development">
+                <h4>Backend Development</h4>
+                <p>Node.js, Express, Django, Ruby on Rails.</p>
+            </div>
+
+            <div class="skill1">
+                <img src="UI1.png" alt="UI/UX Design">
+                <h4>UI/UX Design</h4>
+                <p>Figma, Adobe XD, Sketch, Prototyping, User Testing.</p>
+            </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>&copy; 2025 OgDev. All rights reserved.</p>
+            <ul>
+                <li><a href="#"><img src="github.webp" alt="GitHub" style="border-radius:50%;"></a></li>
+                <li><a href="#"><img src="instagram1.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="facebook.png" alt="Facebook" style=" border-radius:50%;"></a></li>
+                <li><a href="#"><img src="whatsapp.png" alt="WhatsApp" style=" border-radius:50%;"></a></li>
+                </ul>   
+            </footer>
+
+    </main>
+</body>
+</html>
