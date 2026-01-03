@@ -141,77 +141,74 @@
     }
     .intro {
         display: none;
-        position: absolute;
-        z-index: 1000;
-        left: 0;
-        top: 40px;
-        width: 100%;
-        height: 100%;
-        color: black;
-        border: 2px black transparent;
-        border-radius: 10px;
-        background-color: rgb(40, 224, 40);
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
-    
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #171717;
+        color: white;
+        padding: 20px;
+        border: 2px solid black;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgb(18, 208, 18);
+        max-width: 620px;
+        width: 92%;
+        z-index: 1001;
     }
     .intro.show {
         display: flex;
     }
-    .close {
+    .intro .close {
         position: absolute;
-        top: 70px;
-        right: 35px;
-        color: white;
-        font-size: 30px;
-        font-weight: bold;
-        transition: 0.3s;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
         cursor: pointer;
     }
     .intro h3 {
-        font-family:"Sofia",sans-serif;
-        font-size: 37px;
-        font-weight: 700;
-        color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-size: 24px;
+        text-align: center;
         text-transform: uppercase;
+        font-family: "sofia", sans-serif;
+        color: rgb(18, 208, 18);
     }
     .intro h4 {
-         color:rgb(14, 135, 14);
-        font-size: 30px;
-        font-weight: 800;
-    }
-    .intro p {
-        text-indent: 18px;
-        line-height: 23px;
-        color: black;
-        padding: 10px;
-    }
-    .intro .off {
-        position: absolute;
         font-size: 20px;
-        left: 0;
-        bottom: 0;
-        border: 2px solid transparent;
+        margin-top: 20px;
+    }
+    .intro .port {
+        border: 1px solid transparent;
         border-radius: 10px;
-        background-color: #171717;
-        padding: 7px;
-        margin-left: 10px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgb(18, 208, 18);
+        margin-top: 10px;
+    }
+    .intro .port p {
         font-size: 13px;
+        line-height: 20px;
+        margin-top: 10px;
     }
-    .intro .off:hover {
-        background-color: white;
-    
+    .intro h4 {
+        text-align: center;
+        font-weight: 600;
     }
-    .intro a {
+    .off a {
         text-decoration: none;
         color: white;
+        font-weight: 700;
+        font-size: 15px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        background-color: black;
+        padding: 10px;
+        box-shadow: 0 0 10px rgb(18, 208, 18);
     }
-    .intro .off a:hover {
+    .off a:hover {
         color: black;
+        background-color: white;
     }
-    @media (max-width: 630px) {
+    @media (max-width: 600px) {
         nav {
             width: 100%;
             margin: 0;
@@ -314,32 +311,35 @@
                 </ul>   
             </footer>
     </main>
-     <section id="home" class="intro">
+     <div id="home" class="intro">
         <span class="close" onclick = "closeTo('home')">&times;</span>
             <h3>welcome to my portfolio</h3>
             <h4>Personal Introduction</h4>
-            <p> A student of University of Lagos,department of Surveying and Geoinformatics Engineering, Nigeria.I'm so passionate about my academics and skills. Being a student and a developer, I have developed a strong interest in creating innovative solutions, engaging user experiences, and efficient code structures.
+            <div class="port">
+            <p> I am a student of University of Lagos,Department of Surveying and Geoinformatics Engineering, Nigeria.Being a student and a developer, I have developed a strong interest in creating innovative solutions, engaging user experiences, and efficient code structures.
                 I have a strong confidence in my ability to contribute effectively to development projects and collaborate with teams to achieve common goals. Also, I am eager to learn and grow as a developer, constantly seeking opportunities to enhance my skills and stay updated with the latest trends.
                 Having a good foundation in programming languages such as HTML, CSS, JavaScript, I am enthusiastic about applying my knowledge to real-world projects and making a positive impact in the tech industry.
             </p>
+            </div>
 
             <h4>Work and Skills</h4>
+            <div class="port">
             <p>I, <b>Ogbu Goodnews Great</b>, is a passionate Developer with expertise in creating dynamic and responsive web applications.
             With a strong foundation in both front-end, I specialize in building seamless digital experiences that merge creativity with technology.
             My skills include HTML, CSS, JavaScript, Python. I am dedicated to continuous learning and staying updated with the latest industry trends to deliver innovative solutions.</p>
             <p>
             Explore more on portfolio to see some of the projects I've worked on and feel free to reach out for collaboration opportunities!
             </p>
+            </div>
 
             <p>
            <b> This is one of the  Project I recently worked on:</b></p>
             <p class="off"><a href="https://goodnews1111.github.io/Desktop/">Check it out</a></p>
-            </section>
+            </div>
 
     <script>
         function openTo(home) {
             let element = document.getElementById(home);
-            element.style.display = "flex"
             element.classList.add("show");
         }
 
