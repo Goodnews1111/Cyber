@@ -9,9 +9,3 @@ function myPage(id) {
         page.style.display = 'block';
             }
         }
-
- function mySkill(skill) {
-    if (!skill) return;
-    let skillSection = document.getElementById(skill);
-    skillSection.style.display = '';
- }
