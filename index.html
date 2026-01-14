@@ -15,14 +15,14 @@
                 <li><a href="#home" onclick="myPage('home')">Home</a></li>
                 <li><a href="#about" onclick = "myPage('about')">About</a></li>
                 <li><a href="#skill" onclick = "myPage('skill')">Skills</a></li>
-                <li><a href="#projects"> Projects</a></li>
-                <li><a href="#contact"> Contact</a></li>
+                <li><a href="#projects" onclick = "myPage('project')"> Projects</a></li>
+                <li><a href="#contact" onclick ="myPage('contact')"> Contact</a></li>
             </ul>
         </nav>
        
 
         <div id="home" class= "page home">
-        <section class="full" id="contact">
+        <section class="full">
             <div class="stack">
             <h2>Full-Stack</h2>
             <h2>Developer</h2>
@@ -113,12 +113,36 @@
             </p>
             </div>
 
-            <p style="margin: 20px,0px,10px, ;">
-           <b> This is one of the  Project I recently worked on:</b></p>
+            <p class="proj">
+           <b> This is one of the  project I recently worked on:</b></p>
             <p class="off"><a href="https://goodnews1111.github.io/Desktop/">Check it out</a></p>
-            </div>
+        </div>
 
+        <div id ="project" class="page project">
+            <h3>My Works</h3>
+            <p>I have worked on different project through my tech journey and personal projects.</p>
+            <p>Ready to check out some of my work?</p>
+            <p style="margin-top: 40px; font-size: 22px;">Visit my GitHub profile for more details.</p>
+            <button class="bot"><a href="https://github.com/Goodnews1111">View Projects</a></button>
+        </div>
+
+        <div class="page contact" id="contact">
+            <h3>Contact Me</h3>
+            <p>If you have any questions, projects, or opportunities you'd like to discuss, feel free to reach out!</p>
+        <form id = "form" onsubmit="sub(this); return false;">
+            <div class="contact-form">
+            <span>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            </span><br>
+            <input type="tel" placeholder="+234 XXX XXX XXXX"><br>
+            <textarea placeholder="Briefly describe your project or inquiry"></textarea><br><br>
+            <button type="submit" onclick="sub('form')">Send Message</button>
+            </div>
+        </form>
+        <div id="message" class="myMessage"></div>
+    </div>
     </main>
-     <script src="index.js"></script>
+     <script src="script.js"></script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+ * {
+        box-sizing: border-box;
+    }
  body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -19,6 +22,26 @@
         list-style: none;
         display: flex;
         gap: 30px;
+    }
+    nav ul li {
+        position: relative;
+    }
+    nav ul li::after{
+        cursor: pointer;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height:3px;
+        background-color: rgb(18, 208, 18);
+        left: 0;
+        bottom: -5px;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.1s;
+
+    }
+    nav ul li:hover::after{
+        transform: scaleX(1);
     }
     nav a {
         color: white;
@@ -190,6 +213,107 @@
         color: black;
         background-color: white;
     }
+    .proj {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .contact {
+        display: none;
+        flex-direction: column;
+        background-color: #171717;
+        color: white;
+        padding: 30px;
+        margin: 30px;
+
+    }
+    .contact h3 {
+        font-size: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: auto;
+        color: white
+    }
+    .contact p{
+        text-align: center;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    .contact-form {
+        background-color: #171717;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgb(18, 208, 18);
+        border: 1px solid white;
+        box-sizing: border-box;
+        margin: auto;
+        width: 60%;
+    }
+    span {
+        display: flex;
+        gap: 20px;
+    }
+    input {
+        width: 100%;
+        padding: 18px;
+        position: relative;
+        margin: 20px 0;
+        border: 2px solid rgb(18, 208, 18);
+        border-radius: 5px;
+    }
+    .contact-form textarea {
+        width: 100%;
+        height: 100px;
+        padding: 18px;
+        position: relative;
+        margin: 20px 0;
+        border: 2px solid rgb(18, 208, 18);
+        border-radius: 5px;
+        resize: none;
+    }
+    button[type="submit"] {
+        background-color: rgb(18, 208, 18);
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .myMessage {
+        display: block;
+        color: rgb(18, 208, 18);
+    }
+    .project {
+        display: none;
+        flex-direction: column;
+        background-color: #171717;
+        color: white;
+        padding: 30px;
+        margin: 30px;
+    }
+    .project h3 {
+        color: rgb(18, 208, 18);
+        font-size: 50px;
+    }
+    .project p{
+        font-size: 17px;
+    }
+    .bot a {
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    .bot {
+        background-color: rgb(18, 208, 18);
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
     @media (max-width: 580px) {
         nav {
             width: 100%;
