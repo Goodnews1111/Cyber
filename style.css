@@ -363,4 +363,11 @@
              width: 100%;
             
         }
+        .contact-form {
+            width: 100%;
+        }
+        span {
+            display: block;
+        }
+
     }
